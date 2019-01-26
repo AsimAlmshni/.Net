@@ -1,0 +1,1235 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+    <tr>
+        <th>Email</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Salary</th>
+        <th>Age</th>
+</tr>
+    @foreach (var item in ViewBag.EmployeeData)
+    {
+        <tr>
+            <td>@item.Email</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.Salary</td>
+            <td>@item.Age</td>
+        </tr>
+    }
+    </table>*@
+
+@using (Html.BeginForm("Import", "Index", FormMethod.Post))
+{
+    <span>Excel File</span><input type="file" name="excelFile" />
+    <br />
+    <input type="submit" value="Import" />
+}
+    @ViewBag.dep
+
+<br />
+    <div>
+        <table border="1" cellspacing="2" cellpadding="2">
+            <tr>
+                <th>Company Name</th>
+                <th>Completed By</th>
+                <th>Date Completed</th>
+            </tr>
+            @foreach (var item in ViewBag.pront)
+            {
+                <tr>
+                    <td>@item.CompanyName</td>
+                    <td>@item.CompletedBy</td>
+                    <td>@item.DateCompleted</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <br />
+    <div>
+        <table border="1" cellspacing="2" cellpadding="2">
+            <tr>
+                <th>Company Location</th>
+                <th>Square Footage</th>
+                <th>Union</th>
+            </tr>
+            @foreach (var item in ViewBag.printLoc)
+            {
+                <tr>
+                    <td>@item.Location</td>
+                    <td>@item.SquareFootage</td>
+                    <td>@item.Union</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <br />
+    <div>
+        <table border="1" cellspacing="2" cellpadding="2">
+            <tr>
+                <th>Number of salaried Employees</th>
+                <th>Number of Hourly Employees</th>
+                <th>Number of Temporarly Workers</th>
+                <th>Number of Skilled Employees</th>
+                <th>Actual Total number of Employees</th>
+            </tr>
+            @foreach (var item in ViewBag.EmployeeData)
+            {
+                <tr>
+                    <td>@item.NoOfSalariedEmployees</td>
+                    <td>@item.NoOfHourlyEmployee</td>
+                    <td>@item.NoOfTemprorayWorkers</td>
+                    <td>@item.NoOfSkilledEmployees</td>
+                    <td>@item.ActualTotalNoOfEmplyees</td>
+                </tr>
+            }
+        </table>
+    </div>
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Metal Cutting</th>
+            <th>Metal Forming-sheet</th>
+            <th>Metal Forming-forging</th>
+            <th>Assembly-Test</th>
+            <th>Painting-Coating</th>
+            <th>Metal Fabrication</th>
+            <th>Casting</th>
+            <th>Welding</th>
+
+        </tr>
+        @foreach (var item in ViewBag.TP)
+            {
+            <tr>
+                <td>@item.MetalCutting</td>
+                <td>@item.MetalFormingSheet</td>
+                <td>@item.MetalFormingForging</td>
+                <td>@item.AssembleyTest</td>
+                <td>@item.PaintingCoating</td>
+                <td>@item.MetalFabrication</td>
+                <td>@item.Casting</td>
+                <td>@item.Welding</td>
+            </tr>
+        }
+    </table>
+</div>
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Customer Base by %</th>
+            <td colspan="2">@ViewBag.head</td>
+            <tr>
+                <th></th>
+                <th>Revenue</th>
+                <th>Total Revenue</th>
+            </tr>
+        </tr>
+
+        @foreach (var item in ViewBag.CBase)
+            {
+               @*@item.CustomerBaseBy*@
+            <tr>
+                <th>
+                    Customer 1
+                    <td>@item.Customer1.Revenue</td>
+                    <td>@item.Customer1.TotalRevenue</td>
+            </tr>
+
+            <tr>
+            <th>
+                    Customer 2
+                    <td>@item.Customer2.Revenue</td>
+                    <td>@item.Customer2.TotalRevenue</td>
+            </tr>
+            <tr>
+                <th>
+                    Customer 3
+                <td>@item.Customer3.Revenue</td>
+                <td>@item.Customer3.TotalRevenue</td>
+            </tr>
+
+            <tr>
+                <th>
+                    Customer 4
+                <td>@item.Customer4.Revenue</td>
+                <td>@item.Customer4.TotalRevenue</td>
+            </tr>
+            <tr>
+                <th>
+                    Customer 5
+                <td>@item.Customer5.Revenue</td>
+                <td>@item.Customer5.TotalRevenue</td>
+            </tr>
+
+            <tr>
+                <th>
+                    Customer 6
+                <td>@item.Customer6.Revenue</td>
+                <td>@item.Customer6.TotalRevenue</td>
+            </tr>
+            <tr>
+                <th>
+                    Customer 7
+                <td>@item.Customer7.Revenue</td>
+                <td>@item.Customer7.TotalRevenue</td>
+            </tr>
+
+            <tr>
+                <th>
+                    Customer 8
+                <td>@item.Customer8.Revenue</td>
+                <td>@item.Customer8.TotalRevenue</td>
+            </tr>
+            <tr>
+                <th>
+                    Customer 9
+                <td>@item.Customer9.Revenue</td>
+                <td>@item.Customer9.TotalRevenue</td>
+            </tr>
+
+            <tr>
+                <th>
+                    Customer 10
+                <td>@item.Customer10.Revenue</td>
+                <td>@item.Customer10.TotalRevenue</td>
+            </tr>
+        }
+    </table>
+</div>
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Major Product Lines</th>
+            <th>Number of Suppliers</th>
+        </tr>
+        @foreach (var item in ViewBag.Product)
+            {
+            <tr>
+                <td>@item.MajorProductLine</td>
+                <td>@item.NumberOfSuppliers</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Financial Performance</th>
+            <th>Prior Year</th>
+            <th>Current Year to Date</th>
+            <th>Curent Budget Yr. Forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.F)
+            {
+            <tr>
+                <th>
+                    Gross Revenues
+                    <td>@item.GR.PriorYear</td>
+                    <td>@item.GR.CurrentYeadToDate</td>
+                    <td>@item.GR.CurrentBudget</td>
+            </tr>
+            <tr>
+                <th>
+                    Net Operating Income
+                    <td>@item.NOI.PriorYear</td>
+                    <td>@item.NOI.CurrentYeadToDate</td>
+                    <td>@item.NOI.CurrentBudget</td>
+            </tr>
+            <tr>
+                <th>
+                    Operating Profit Margin
+                <td>@item.OPM.PriorYear</td>
+                <td>@item.OPM.CurrentYeadToDate</td>
+                <td>@item.OPM.CurrentBudget</td>
+            </tr>
+            <tr>
+                <th>
+                    EBIT/EBITDA
+                <td>@item.EBITA.PriorYear</td>
+                <td>@item.EBITA.CurrentYeadToDate</td>
+                <td>@item.EBITA.CurrentBudget</td>
+            </tr>
+            <tr>
+                <th>
+                    EBIT/EBITDA % of Gross Revenue
+                <td>@item.EBITPercent.PriorYear</td>
+                <td>@item.EBITPercent.CurrentYeadToDate</td>
+                <td>@item.EBITPercent.CurrentBudget</td>
+            </tr>
+            <tr>
+                <th>
+                    Total Cash
+                <td>@item.TC.PriorYear</td>
+                <td>@item.TC.CurrentYeadToDate</td>
+                <td>@item.TC.CurrentBudget</td>
+            </tr>
+            <tr>
+                <th>
+                    Monthly Burn
+                <td>@item.MB.PriorYear</td>
+                <td>@item.MB.CurrentYeadToDate</td>
+                <td>@item.MB.CurrentBudget</td>
+            </tr>
+            <tr>
+                <th>
+                    Net Cash Flow 
+                <td>@item.NCF.PriorYear</td>
+                <td>@item.NCF.CurrentYeadToDate</td>
+                <td>@item.NCF.CurrentBudget</td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Safety/HR</th>
+            <th>Prior Year Total</th>
+            <th>Prior Year Monthly Average</th>
+            <th>Current Year Monthly Average</th>
+            <th>YTD Forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.HR)
+            {
+            <tr>
+                <th>
+                    Number of Recordables
+                <td>@item.NOR.PriorYearTotal</td>
+                <td>@item.NOR.PYMA</td>
+                <td>@item.NOR.CYMA</td>
+                <td>@item.NOR.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>
+                    Number of Lost Time Work Days
+                <td>@item.NOLTWD.PriorYearTotal</td>
+                <td>@item.NOLTWD.PYMA</td>
+                <td>@item.NOLTWD.CYMA</td>
+                <td>@item.NOLTWD.YTDForecast</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Quality</th>
+            <th>Prior Year Total</th>
+            <th>Prior Year Monthly Average</th>
+            <th>Current Year Monthly Average</th>
+            <th>YTD Forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.PQuality)
+            {
+            <tr>
+                <th>
+                    Number of Recordables
+                <td>@item.NOCC.PriorYearTotal</td>
+                <td>@item.NOCC.PriorYearMonthlyAverage</td>
+                <td>@item.NOCC.CurrentYearMonthlyAverage</td>
+                <td>@item.NOCC.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>
+                    Prior Year Monthly Average
+                <td>@item.QREC.PriorYearTotal</td>
+                <td>@item.QREC.PriorYearMonthlyAverage</td>
+                <td>@item.QREC.CurrentYearMonthlyAverage</td>
+                <td>@item.QREC.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>
+                    Current Year Monthly Average
+                <td>@item.QRIO.PriorYearTotal</td>
+                <td>@item.QRIO.PriorYearMonthlyAverage</td>
+                <td>@item.QRIO.CurrentYearMonthlyAverage</td>
+                <td>@item.QRIO.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>
+                    YTD Forecast
+                <td>@item.SID.PriorYearTotal</td>
+                <td>@item.SID.PriorYearMonthlyAverage</td>
+                <td>@item.SID.CurrentYearMonthlyAverage</td>
+                <td>@item.SID.YTDForecast</td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Productivity</th>
+            <th>Prior Year Total</th>
+            <th>Prior Year Monthly Average</th>
+            <th>Current Year Monthly Average</th>
+            <th>YTD Forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.PProductivitiy)
+            {
+            <tr>
+                <th>
+                    Number of Recordables
+                <td>@item.OE.PYT</td>
+                <td>@item.OE.PYMA</td>
+                <td>@item.OE.CYMA</td>
+                <td>@item.OE.PTDForcats</td>
+            </tr>
+            }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Inventory</th>
+            <th>Prior Year Total</th>
+            <th>Current Year Balance</th>
+            <th>Current Year Monthly Average</th>
+            <th>YTD Forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.PInventory)
+            {
+            <tr>
+                <th>
+                    Cost of Goods Sold at Year End
+                <td>@item.COGSAYE.PYT</td>
+                <td>@item.COGSAYE.CYB</td>
+                <td>@item.COGSAYE.CYMA</td>
+                <td>@item.COGSAYE.YTDFocast</td>
+            </tr>
+            <tr>
+                <th>
+                    Raw Inventory at Year End
+                <td>@item.RIAYE.PYT</td>
+                <td>@item.RIAYE.CYB</td>
+                <td>@item.RIAYE.CYMA</td>
+                <td>@item.RIAYE.YTDFocast</td>
+            </tr>
+            <tr>
+                <th>
+                    Purchased Inventory at Year End
+                <td>@item.PIAYE.PYT</td>
+                <td>@item.PIAYE.CYB</td>
+                <td>@item.PIAYE.CYMA</td>
+                <td>@item.PIAYE.YTDFocast</td>
+            </tr>
+            <tr>
+                <th>
+                    Work In Progress at Year End
+                <td>@item.WIPAYE.PYT</td>
+                <td>@item.WIPAYE.CYB</td>
+                <td>@item.WIPAYE.CYMA</td>
+                <td>@item.WIPAYE.YTDFocast</td>
+            </tr>
+            <tr>
+                <th>
+                    Finished Inventory at Year End
+                <td>@item.FIAYE.PYT</td>
+                <td>@item.FIAYE.CYB</td>
+                <td>@item.FIAYE.CYMA</td>
+                <td>@item.FIAYE.YTDFocast</td>
+            </tr>
+            <tr>
+                <th>
+                    Total Inventory at Year End
+                <td>@item.TIAYE.PYT</td>
+                <td>@item.TIAYE.CYB</td>
+                <td>@item.TIAYE.CYMA</td>
+                <td>@item.TIAYE.YTDFocast</td>
+            </tr>
+            <tr>
+                <th>
+                    Total Turns Per Year
+                <td>@item.TTPY.PYT</td>
+                <td>@item.TTPY.CYB</td>
+                <td>@item.TTPY.CYMA</td>
+            </tr>
+        }
+    </table>
+</div>
+<h1 style="color:red">Second Sheet</h1>
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Company Name</th>
+            <th>Completed By</th>
+            <th>Date Completed</th>
+        </tr>
+        @foreach (var item in ViewBag.SecondSheet)
+            {
+            <tr>
+                <td>@item.CompanyName</td>
+                <td>@item.CompletedBy</td>
+                <td>@item.Date</td>
+            </tr>
+        }
+    </table>
+</div>
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Standards</th>
+        </tr>
+        <tr>
+            <th>Labor Standards</th>
+            <th>Material Standards</th>
+            <th>Cycle Time Standards</th>
+            <th>Production Pcs Standards</th>
+        </tr>
+        @foreach (var item in ViewBag.STD)
+            {
+            <tr>
+                <td>@item.LaborStandards</td>
+                <td>@item.MaterialStandards</td>
+                <td>@item.CycleTimeStandards</td>
+                <td>@item.ProductionPcsStandards</td>
+            </tr>
+        }
+    </table>
+</div>
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Standards</th>
+        @foreach (var item in ViewBag.STD)
+            {
+                <tr>
+                    <th>Labor Standards
+                    <td>@item.LaborStandards</td>
+                </tr>
+                <tr>
+                    <th>Material Standards
+                    <td>@item.MaterialStandards</td>
+                </tr>        
+                <tr>
+                    <th>Cycle Time Standards
+                    <td>@item.CycleTimeStandards</td>
+                </tr>
+                <tr>
+                    <th>Production Pcs Standards
+                    <td>@item.ProductionPcsStandards</td>
+                </tr>
+        }
+    </table>
+</div>
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+            <tr>
+                <th>Safety/HR</th>
+                <th>Prior Year</th>
+                <th>Currnet Year By Month</th>
+                <th>YTD forecast</th>
+            </tr>
+            
+            @foreach (var item in ViewBag.SH2)
+            {
+                <tr>
+                    <th>Employee Demographics</th>
+                    <td>@item.ED.PriorYear</td>
+                    <td>@item.ED.CurrentYearByMonth</td>
+                    <td>@item.ED.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Average Age</th>
+                    <td>@item.AA.PriorYear</td>
+                    <td>@item.AA.CurrentYearByMonth</td>
+                    <td>@item.AA.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>@item.G.PriorYear</td>
+                    <td>@item.G.CurrentYearByMonth</td>
+                    <td>@item.G.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Employee of turnover</th>
+                    <td>@item.ETO.PriorYear</td>
+                    <td>@item.ETO.CurrentYearByMonth</td>
+                    <td>@item.ETO.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>No of Grievances</th>
+                    <td>@item.NOG.PriorYear</td>
+                    <td>@item.NOG.CurrentYearByMonth</td>
+                    <td>@item.NOG.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Enviromental Issues</th>
+                    <td>@item.EI.PriorYear</td>
+                    <td>@item.EI.CurrentYearByMonth</td>
+                    <td>@item.EI.YTDForecast</td>
+                </tr>
+            }
+        </table>
+</div>
+
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Quality</th>
+            <th>Prior Year</th>
+            <th>Currnet Year By Month</th>
+            <th>YTD forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.QQ2)
+            {
+            <tr>
+                <th>Containment $ at Customers</th>
+                <td>@item.CAC.PriorYear</td>
+                <td>@item.CAC.CurrentYearByMonth</td>
+                <td>@item.CAC.YTDForecast</td>
+            </tr>
+                <tr>
+                    <th>No of Warranty Issues</th>
+                    <td>@item.NOWI.PriorYear</td>
+                    <td>@item.NOWI.CurrentYearByMonth</td>
+                    <td>@item.NOWI.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>No of Return Pcs</th>
+                    <td>@item.NORP.PriorYear</td>
+                    <td>@item.NORP.CurrentYearByMonth</td>
+                    <td>@item.NORP.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>No of Rework</th>
+                    <td>@item.NORRP.PriorYear</td>
+                    <td>@item.NORRP.CurrentYearByMonth</td>
+                    <td>@item.NORRP.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>PPM by Suppliers</th>
+                    <td>@item.PPM.PriorYear</td>
+                    <td>@item.PPM.CurrentYearByMonth</td>
+                    <td>@item.PPM.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>No of Complaints Issued to Suppliers</th>
+                    <td>@item.NOCITS.PriorYear</td>
+                    <td>@item.NOCITS.CurrentYearByMonth</td>
+                    <td>@item.NOCITS.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Chargebacks Issued</th>
+                    <td>@item.CBI.PriorYear</td>
+                    <td>@item.CBI.CurrentYearByMonth</td>
+                    <td>@item.CBI.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Chargebacks Recovered</th>
+                    <td>@item.CBR.PriorYear</td>
+                    <td>@item.CBR.CurrentYearByMonth</td>
+                    <td>@item.CBR.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>No of Suppliers in Containment</th>
+                    <td>@item.NOSIC.PriorYear</td>
+                    <td>@item.NOSIC.CurrentYearByMonth</td>
+                    <td>@item.NOSIC.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Purch/Raw Pts in Containment</th>
+                    <td>@item.NOPRPIC.PriorYear</td>
+                    <td>@item.NOPRPIC.CurrentYearByMonth</td>
+                    <td>@item.NOPRPIC.YTDForecast</td>
+                </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Delivery</th>
+            <th>Prior Year</th>
+            <th>Currnet Year By Month</th>
+            <th>YTD forecast</th>   
+        </tr>
+
+        @foreach (var item in ViewBag.Dlv)
+            {
+            <tr>
+                <th>Customer On Time Delivery Percent</th>
+                <td>@item.COTDP.PriorYear</td>
+                <td>@item.COTDP.CurrentYearByMonth</td>
+                <td>@item.COTDP.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Inbound On Time Receipt Percent</th>
+                <td>@item.IOTRP.PriorYear</td>
+                <td>@item.IOTRP.CurrentYearByMonth</td>
+                <td>@item.IOTRP.YTDForecast</td>
+            </tr>
+                <tr>
+                    <th>Customer Pcs Past Due</th>
+                    <td>@item.CPPD.PriorYear</td>
+                    <td>@item.CPPD.CurrentYearByMonth</td>
+                    <td>@item.CPPD.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Supplier Pcs Past Due</th>
+                    <td>@item.SPPD.PriorYear</td>
+                    <td>@item.SPPD.CurrentYearByMonth</td>
+                    <td>@item.SPPD.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Outbound Premium Freight $</th>
+                    <td>@item.OPF.PriorYear</td>
+                    <td>@item.OPF.CurrentYearByMonth</td>
+                    <td>@item.OPF.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Inbound Premium Freight $</th>
+                    <td>@item.IPF.PriorYear</td>
+                    <td>@item.IPF.CurrentYearByMonth</td>
+                    <td>@item.IPF.YTDForecast</td>
+                </tr>
+        }
+    </table>
+</div>
+
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Productivity</th>
+            <th>Prior Year</th>
+            <th>Currnet Year By Month</th>
+            <th>YTD forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.Pr2)
+            {
+            <tr>
+                <th>Scrap %</th>
+                <td>@item.SP.PriorYear</td>
+                <td>@item.SP.CurrentYearByMonth</td>
+                <td>@item.SP.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Scrap $</th>
+                <td>@item.SD.PriorYear</td>
+                <td>@item.SD.CurrentYearByMonth</td>
+                <td>@item.SD.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Scrap Pcs</th>
+                <td>@item.SPC.PriorYear</td>
+                <td>@item.SPC.CurrentYearByMonth</td>
+                <td>@item.SPC.YTDForecast</td>
+            </tr>
+                <tr>
+                    <th>FTQ %</th>
+                    <td>@item.FTQ.PriorYear</td>
+                    <td>@item.FTQ.CurrentYearByMonth</td>
+                    <td>@item.FTQ.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Overtime %</th>
+                    <td>@item.OTP.PriorYear</td>
+                    <td>@item.OTP.CurrentYearByMonth</td>
+                    <td>@item.OTP.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Overtime Hrs</th>
+                    <td>@item.OTH.PriorYear</td>
+                    <td>@item.OTH.CurrentYearByMonth</td>
+                    <td>@item.OTH.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Overtime $</th>
+                    <td>@item.OTD.PriorYear</td>
+                    <td>@item.OTD.CurrentYearByMonth</td>
+                    <td>@item.OTD.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Downtime %</th>
+                    <td>@item.DTP.PriorYear</td>
+                    <td>@item.DTP.CurrentYearByMonth</td>
+                    <td>@item.DTP.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Downtime Hrs</th>
+                    <td>@item.DTH.PriorYear</td>
+                    <td>@item.DTH.CurrentYearByMonth</td>
+                    <td>@item.DTH   .YTDForecast</td>
+                </tr>
+        }
+    </table>
+</div>
+
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Inventory</th>
+            <th>Prior Year</th>
+            <th>Currnet Year By Month</th>
+            <th>YTD forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.Iv2)
+            {
+            <tr>
+                <th>Days on Hand</th>
+                <td>@item.DOH.PriorYear</td>
+                <td>@item.DOH.CurrentYearByMonth</td>
+                <td>@item.DOH.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Raw</th>
+                <td>@item.Raw.PriorYear</td>
+                <td>@item.Raw.CurrentYearByMonth</td>
+                <td>@item.Raw.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Purshased</th>
+                <td>@item.Purchased.PriorYear</td>
+                <td>@item.Purchased.CurrentYearByMonth</td>
+                <td>@item.Purchased.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Work In Progress</th>
+                <td>@item.WIP.PriorYear</td>
+                <td>@item.WIP.CurrentYearByMonth</td>
+                <td>@item.WIP.YTDForecast</td>
+            </tr>
+                <tr>
+                    <th>Finished</th>
+                    <td>@item.Finished.PriorYear</td>
+                    <td>@item.Finished.CurrentYearByMonth</td>
+                    <td>@item.Finished.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>$ on Hand</th>
+                    <td>@item.DOH2.PriorYear</td>
+                    <td>@item.DOH2.CurrentYearByMonth</td>
+                    <td>@item.DOH2.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Raw</th>
+                    <td>@item.Raw2.PriorYear</td>
+                    <td>@item.Raw2.CurrentYearByMonth</td>
+                    <td>@item.Raw2.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Purchased</th>
+                    <td>@item.Purchased2.PriorYear</td>
+                    <td>@item.Purchased2.CurrentYearByMonth</td>
+                    <td>@item.Purchased2.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Work in Progress</th>
+                    <td>@item.WIP2.PriorYear</td>
+                    <td>@item.WIP2.CurrentYearByMonth</td>
+                    <td>@item.WIP2.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Finished</th>
+                    <td>@item.Finished2.PriorYear</td>
+                    <td>@item.Finished2.CurrentYearByMonth</td>
+                    <td>@item.Finished2.YTDForecast</td>
+                </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Inventory Continued</th>
+            <th>Prior Year</th>
+            <th>Currnet Year By Month</th>
+            <th>YTD forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.InvCon)
+            {
+            <tr>
+                <th>Indirect Material on Hand</th>
+                <td>@item.IMOH.PriorYear</td>
+                <td>@item.IMOH.CurrentYearByMonth</td>
+                <td>@item.IMOH.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Raw</th>
+                <td>@item.Raw.PriorYear</td>
+                <td>@item.Raw.CurrentYearByMonth</td>
+                <td>@item.Raw.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Purshased</th>
+                <td>@item.Purchased.PriorYear</td>
+                <td>@item.Purchased.CurrentYearByMonth</td>
+                <td>@item.Purchased.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Work In Progress</th>
+                <td>@item.WIP.PriorYear</td>
+                <td>@item.WIP.CurrentYearByMonth</td>
+                <td>@item.WIP.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Finished</th>
+                <td>@item.Finished.PriorYear</td>
+                <td>@item.Finished.CurrentYearByMonth</td>
+                <td>@item.Finished.YTDForecast</td>
+            </tr>
+                <tr>
+                    <th>Turns Indirect Materials</th>
+                    <td>@item.TIM.PriorYear</td>
+                    <td>@item.TIM.CurrentYearByMonth</td>
+                    <td>@item.TIM.YTDForecast</td>
+                </tr>
+                <tr>
+                    <th>Excess / Obsolete</th>
+                    <td>@item.ExOb.PriorYear</td>
+                    <td>@item.ExOb.CurrentYearByMonth</td>
+                    <td>@item.ExOb.YTDForecast</td>
+                </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Cost</th>
+            <th>Prior Year</th>
+            <th>Currnet Year By Month</th>
+            <th>YTD forecast</th>
+        </tr>
+
+        @foreach (var item in ViewBag.CostData)
+            {
+            <tr>
+                <th>Sales</th>
+                <td>@item.Sls.PriorYear</td>
+                <td>@item.Sls.CurrentYearByMonth</td>
+                <td>@item.Sls.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Material Cost % of Sales</th>
+                <td>@item.MCOS.PriorYear</td>
+                <td>@item.MCOS.CurrentYearByMonth</td>
+                <td>@item.MCOS.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Labor Cost % of Sales</th>
+                <td>@item.LCOS.PriorYear</td>
+                <td>@item.LCOS.CurrentYearByMonth</td>
+                <td>@item.LCOS.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>ESGA % of Sales</th>
+                <td>@item.ESGA.PriorYear</td>
+                <td>@item.ESGA.CurrentYearByMonth</td>
+                <td>@item.ESGA.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Manuf Expense % of Sales</th>
+                <td>@item.MEOS.PriorYear</td>
+                <td>@item.MEOS.CurrentYearByMonth</td>
+                <td>@item.MEOS.YTDForecast</td>
+            </tr>
+            <tr>
+                <th>Utility Costs</th>
+                <td>@item.UC.PriorYear</td>
+                <td>@item.UC.CurrentYearByMonth</td>
+                <td>@item.UC.YTDForecast</td>
+            </tr>
+                <tr>
+                    <th>Transportation</th>
+                    <td>@item.T.PriorYear</td>
+                    <td>@item.T.CurrentYearByMonth</td>
+                    <td>@item.T.YTDForecast</td>
+                </tr>
+        }
+    </table>
+</div>
+<br />
+
+<h1 style="color:green">Third Sheet</h1>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th>Company Name</th>
+            <th>Completed By</th>
+            <th>Date Completed</th>
+        </tr>
+        @foreach (var item in ViewBag.CompDetails3)
+            {
+            <tr>
+                <td>@item.CompanyName</td>
+                <td>@item.CompletedBy</td>
+                <td>@item.Date</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th colspan="2">CLEAN, ORDERLY, ORGANIZED</th>
+        </tr>
+        @foreach (var item in ViewBag.Coo)
+            {
+            <tr>
+                <th>Are plant aisles visibly marked?</th>
+                <td>@item.A1</td>
+            </tr>
+            <tr>
+                <th>Are plant floors free of trash and litter?</th>
+                <td>@item.A2</td>
+            </tr>
+            <tr>
+                <th>Are floors/storage areas marked indicating proper location?</th>
+                <td>@item.A3</td>
+            </tr>
+            <tr>
+                <td colspan="2">@item.Observation</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>            
+            <th colspan="2">VISUALIZATION, STANDARDIZATION, CONTINUOUS IMPROVEMENT</th>
+        </tr>
+        @foreach (var item in ViewBag.Coo2)
+            {
+            <tr>
+                <th>Are Andon boards in place and utilized?</th>
+                <td>@item.A1</td>
+            </tr>
+            <tr>
+                <th>Are FIFO/Inventory min/max systems in place?</th>
+                <td>@item.A2</td>
+            </tr>
+            <tr>
+                <th>Is similar performance tracking information posted and visual within the plant?</th>
+                <td>@item.A3</td>
+            </tr>
+            <tr>
+                <th>Are "stackpole" lights used?</th>
+                <td>@item.A4</td>
+            </tr>
+            <tr>
+                <th>Are there indications that performance measures are posted and tracked for improvement?</th>
+                <td>@item.A5</td>
+            </tr>
+            <tr>
+                <td colspan="2">@item.Observation</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th colspan="2">LINE OF SIGHT MANAGEMENT</th>
+        </tr>
+        @foreach (var item in ViewBag.Coo3)
+            {
+            <tr>
+                <th>Is plant floor conducive to visual management of process flow status?</th>
+                <td>@item.A1</td>
+            </tr>
+            <tr>
+                <th>Does over-all plant layout seem "logical" from a material flow perspective?</th>
+                <td>@item.A2</td>
+            </tr>
+            <tr>
+                <th>Is it possible to stand in a single location and observe operating status of the plant/production line?</th>
+                <td>@item.A3</td>
+            </tr>
+            <tr>
+                <td colspan="2">@item.Observation</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th colspan="2">SAFETY, ENVIRONMENT, CULTURE</th>
+        </tr>
+        @foreach (var item in ViewBag.Coo4)
+            {
+            <tr>
+                <th>Did you observe any "unsafe" activity during your visit?</th>
+                <td>@item.A1</td>
+            </tr>
+            <tr>
+                <th>Is the vehicular and human traffic managed safely on the plant floor?</th>
+                <td>@item.A2</td>
+            </tr>
+            <tr>
+                <th>Are there visible indications of safety audits/performance measurements?</th>
+                <td>@item.A3</td>
+            </tr>
+            <tr>
+                <th>Is there evidence of plant floor team meetings?</th>
+                <td>@item.A4</td>
+            </tr>
+            <tr>
+                <th>Are there indicators of concern for Environmental issues?</th>
+                <td>@item.A5</td>
+            </tr>
+            <tr>
+                <td colspan="2">@item.Observation</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th colspan="2">QUALITY PERFORMANCE INDICATORS</th>
+        </tr>
+        @foreach (var item in ViewBag.Coo5)
+            {
+            <tr>
+                <th>Are quality performance indicators posted on the plant floor?</th>
+                <td>@item.A1</td>
+            </tr>
+            <tr>
+                <th>Is there evidence that the Metrics are reviewed with the team members?</th>
+                <td>@item.A2</td>
+            </tr>
+            <tr>
+                <th>Are there indicators that the Metrics are improving?</th>
+                <td>@item.A3</td>
+            </tr>
+            <tr>
+                <th>Is there evidence that quality is the high priority of the leadership?</th>
+                <td>@item.A4</td>
+            </tr>
+            <tr>
+                <td colspan="2">@item.Observation</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th colspan="2">SCHEDULE PERFORMANCE INDICATORS</th>
+        </tr>
+        @foreach (var item in ViewBag.Coo6)
+            {
+            <tr>
+                <th>Are Schedule Performance Indicators posted on the Plant Floor?</th>
+                <td>@item.A1</td>
+            </tr>
+            <tr>
+                <th>Are hourly "count" sheet posted at each manufacturing line/area?</th>
+                <td>@item.A2</td>
+            </tr>
+            <tr>
+                <th>Is there evidence that the Metrics are reviewed with the team members?</th>
+                <td>@item.A3</td>
+            </tr>
+            <tr>
+                <th>Are there indicators that the metrics are improving?</th>
+                <td>@item.A4</td>
+            </tr>
+            <tr>
+                <th>Is there evidence that schedule performance is a high priority of the leadership?</th>
+                <td>@item.A5</td>
+            </tr>
+            <tr>
+                <td colspan="2">@item.Observation</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<br />
+<div>
+    <table border="1" cellspacing="2" cellpadding="2">
+        <tr>
+            <th colspan="2">DISCIPLINE AND FOCUS</th>
+        </tr>
+        @foreach (var item in ViewBag.Coo7)
+            {
+            <tr>
+                <th>Is there a Scrap Process?</th>
+                <td>@item.A1</td>
+            </tr>
+            <tr>
+                <th>Is there evidence that the process is followed?</th>
+                <td>@item.A2</td>
+            </tr>
+            <tr>
+                <th>Does the process provide for security and control of costs?</th>
+                <td>@item.A3</td>
+            </tr>
+            <tr>
+                <th>Is scrap performance visually tracked and reviewed with team?</th>
+                <td>@item.A4</td>
+            </tr>
+            <tr>
+                <th>"Walk" the scrap process:</th>
+                <td>@item.A5</td>
+            </tr>
+            <tr>
+                <td colspan="2">@item.Observation</td>
+            </tr>
+        }
+    </table>
+</div>
+
+
